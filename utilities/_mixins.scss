@@ -1,0 +1,23 @@
+//mixins con parametros
+
+@mixin new ($width, $height) {
+    width: $width;
+    height: $height;
+    background-color: red
+}
+
+.sect-1{
+    //@include new(500px, 200px)
+}
+
+//mixin sin parametros 
+
+@mixin mixin2{
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    display: flex;
+    justify-content:center;
+    justify-items: center;
+    align-items: center;
+}

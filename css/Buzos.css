@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #181733;
+}
+header h1 a{
+    display: flex;
+    justify-content:center ;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    background-color: #A01721;
+    text-decoration: none;
+    padding: 10px;
+}
+header h1{
+    margin: 10px;
+}
+main section .img-container1 div img{
+    margin: 20px;
+    width: 350px;
+    height: 300px;
+}
+main section .img-container1{
+    display: flex;
+    flex-direction: row;
+    background-color:#A01721 ;
+}
+main section .img-container2{
+    display: flex;
+    flex-direction: row;
+    background-color: #A01721;
+}
+main section .img-container2 div img{
+    margin: 20px;
+    width: 350px;
+    height: 300px;
+}
+main section{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+article .ofertas-h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: #A01721;
+    color: white;
+}
+footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: blanchedalmond;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+@media screen and (max-width:1024px){
+main section .img-container1 div img{
+    width: 250px;
+}
+main section .img-container2 div img{
+    width: 250px;
+}
+main section .img-container1 div{
+    width: 300px;
+}
+main section .img-container2 div{
+    width: 300px;
+}
+}
+@media screen and (max-width:600px){
+    main section .img-container1{
+        display: flex;
+        flex-direction: column;
+        background-color: #A01721;
+        border: 5px solid white;
+    }
+    main section .img-container1 div{
+        display: flex;
+        justify-content: center;
+
+    }
+    main section .img-container2 div{
+        display: flex;
+        justify-content: center;
+    }
+    main section .img-container2{
+        display: flex;
+        flex-direction: column;
+        background-color: #A01721;
+        border: 5px solid white;
+    }
+}

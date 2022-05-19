@@ -1,0 +1,237 @@
+//import partial
+@import "utilities/variables";
+@import "utilities/operaciones";
+@import "utilities/mixins";
+
+
+
+
+
+//codigo
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #07102C ;
+}
+header{
+    border: 3px solid white;
+    margin: 20px;
+    padding: 20px;
+    background-color: black;
+}
+header h1 a{
+    color: white;
+    font-size: $med-1;
+    text-decoration: none;
+    //Uso del &
+    &:hover{
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 30%;
+    }
+}
+header h1{
+    text-align: center;
+}
+main .padre{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    flex-direction: column;
+}
+main .padre .hijo-1 .img-1 img{
+    display: flex;
+    justify-content: start;
+    height: $t-img;
+    width: $t-img;
+    margin: 30px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+main .padre .hijo-1{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+main .padre .hijo-1 p{
+    text-align:$talg ;
+    color: $lcl;
+    width: 500px;
+    font-size: $ftz;
+}
+main .padre .hijo-2{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+}
+main .padre .hijo-2 p{
+    text-align: $talg;
+    color: $lcl;
+    width: 500px;
+    font-size: $ftz;
+}
+main .padre .hijo-2 .img-2 img{
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 30px;
+    height: $t-img;
+    width: $t-img;
+}
+main .padre .hijo-2 .img-2{
+    order: 1;
+}
+main .padre .hijo-3{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+main .padre .hijo-3 p{
+    text-align: $talg;
+    color: $lcl;
+    width: 500px;
+    font-size: $ftz;
+}
+main .padre .hijo-3 .img-3 img{
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 30px;
+    height: $t-img;
+    width: $t-img;
+}
+section div footer{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: blanchedalmond;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.din{
+@include mixin2
+}
+article img{
+    width: 250px;
+    height: 250px;
+}
+
+@media screen and (max-width:600px){
+    header h1 a{
+        &:hover{
+            background-color: grey;
+        }
+    }
+    main .padre .hijo-1{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    main .padre .hijo-1 p{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: $ftz;
+    }
+    main .padre .hijo-1 .img-1 img{
+        width: 250px;
+        height: 250px;
+    }
+    main .padre .hijo-2{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    main .padre .hijo-2 p{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: $ftz;
+    }
+    main .padre .hijo-2 .parrafo-2{
+        order: 2;
+    }
+    main .padre .hijo-2 .img-2 img{
+        width: 250px;
+        height: 250px;
+    }
+    main .padre .hijo-3{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    main .padre .hijo-3 p{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: $ftz;
+    }
+    main .padre .hijo-3 .img-3 img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    
+    header{
+        height: 70px;
+    }
+    header h1 a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $ftz;
+    }
+    main .padre .hijo-1 .img-1 img{
+        width: 280px;
+        height: 280px;
+    }
+    main .padre .hijo-2 .img-2 img{
+        width: 280px;
+        height: 280px;
+    }
+    main .padre .hijo-3 .img-3 img{
+        width: 250px;
+        height: 250px;
+    }
+    main .padre .hijo-1 p{
+        text-align:$talg ;
+        color: $lcl;
+        width: 500px;
+        font-size: 20px;
+    }
+    main .padre .hijo-2 p{
+        text-align:$talg ;
+        color: $lcl;
+        width: 500px;
+        font-size: 20px;
+    }
+    main .padre .hijo-3 p{
+        text-align:$talg ;
+        color: $lcl;
+        width: 500px;
+        font-size: 20px;
+    }
+    .mixin-main{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        height: 250px;
+        width: 250px;
+    }
+    article img{
+        width: 200px;
+        height: 200px;
+    }
+}
