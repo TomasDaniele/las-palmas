@@ -11,13 +11,25 @@ main .padre .hijo-2 p {
   background-color: black;
   color: blanchedalmond; }
 
+.sect-1 {
+  width: 500px;
+  height: 200px;
+  background-color: red; }
+
+.din {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  margin-top: 100px; }
+
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box; }
 
 body {
-  background-color: #07102C; }
+  background-color: #07102C;
+  border: 3px solid #A01721; }
 
 header {
   border: 3px solid white;
@@ -117,11 +129,8 @@ section div footer {
   text-align: center; }
 
 .din {
-  width: 300px;
-  height: 300px;
-  margin-top: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   justify-items: center;
   align-items: center; }
 
@@ -132,16 +141,22 @@ article img {
 @media screen and (max-width: 600px) {
   header h1 a:hover {
     background-color: grey; }
+  header {
+    display: flex;
+    justify-content: center; }
+  main {
+    display: flex;
+    justify-content: center; }
   main .padre .hijo-1 {
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column; }
-  main .padre .hijo-1 p {
+  main .padre .hijo-1 .parrafo-1 p {
     text-align: center;
     color: white;
     width: 100%;
-    font-size: 30px; }
+    font-size: 20px; }
   main .padre .hijo-1 .img-1 img {
     width: 250px;
     height: 250px; }
@@ -150,11 +165,11 @@ article img {
     align-items: center;
     justify-content: start;
     flex-direction: column; }
-  main .padre .hijo-2 p {
+  main .padre .hijo-2 .parrafo-2 p {
     text-align: center;
     color: white;
     width: 100%;
-    font-size: 30px; }
+    font-size: 20px; }
   main .padre .hijo-2 .parrafo-2 {
     order: 2; }
   main .padre .hijo-2 .img-2 img {
@@ -165,11 +180,11 @@ article img {
     align-items: center;
     justify-content: start;
     flex-direction: column; }
-  main .padre .hijo-3 p {
+  main .padre .hijo-3 .parrafo-3 p {
     text-align: center;
     color: white;
     width: 100%;
-    font-size: 30px; }
+    font-size: 20px; }
   main .padre .hijo-3 .img-3 img {
     width: 250px;
     height: 250px; } }

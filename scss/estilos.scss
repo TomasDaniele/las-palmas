@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #07102C ;
+    @include condition(#07102C)
 }
 header{
     border: 3px solid white;
@@ -116,7 +116,8 @@ section div footer{
     text-align: center;
 }
 .din{
-@include mixin2
+  @include mixin2;
+  @extend %tamano;
 }
 article img{
     width: 250px;
@@ -129,17 +130,25 @@ article img{
             background-color: grey;
         }
     }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+    }
     main .padre .hijo-1{
         display: flex;
         align-items: center;
         justify-content: start;
         flex-direction: column;
     }
-    main .padre .hijo-1 p{
+    main .padre .hijo-1 .parrafo-1 p{
         text-align: center;
         color: white;
         width: 100%;
-        font-size: $ftz;
+        font-size: 20px;
     }
     main .padre .hijo-1 .img-1 img{
         width: 250px;
@@ -151,11 +160,11 @@ article img{
         justify-content: start;
         flex-direction: column;
     }
-    main .padre .hijo-2 p{
+    main .padre .hijo-2 .parrafo-2 p{
         text-align: center;
         color: white;
         width: 100%;
-        font-size: $ftz;
+        font-size: 20px;
     }
     main .padre .hijo-2 .parrafo-2{
         order: 2;
@@ -170,11 +179,11 @@ article img{
         justify-content: start;
         flex-direction: column;
     }
-    main .padre .hijo-3 p{
+    main .padre .hijo-3 .parrafo-3 p{
         text-align: center;
         color: white;
         width: 100%;
-        font-size: $ftz;
+        font-size: 20px;
     }
     main .padre .hijo-3 .img-3 img{
         width: 250px;

@@ -7,17 +7,37 @@
 }
 
 .sect-1{
-    //@include new(500px, 200px)
+    @include new(500px, 200px)
 }
 
 //mixin sin parametros 
 
 @mixin mixin2{
-    width: 300px;
-    height: 300px;
-    margin-top: 100px;
     display: flex;
-    justify-content:center;
+    justify-content:start;
     justify-items: center;
     align-items: center;
+}
+
+//extend
+
+%tamano {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+//condicionales
+
+@mixin condition ($color){
+    background-color: $color;
+
+    //condicional
+    @if $color == #07102C{
+        border: 3px solid #A01721;
+    }
+    @else {
+        border: 3px solid black;
+    }
 }
